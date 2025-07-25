@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website showcasing the professional jour
 
 ## 🌐 Live Website
 
-Visit the live portfolio at: [https://vikrantkumar.dev](https://vikrantkumar.dev)
+Visit the live portfolio at: [https://vs-kashyap.github.io](https://vs-kashyap.github.io)
 
 ## 👨‍💻 About
 
