@@ -304,6 +304,7 @@ header {
   display: table-cell;
   vertical-align: middle;
   max-width: 100%;
+  z-index: 7;
 }
 
 .home .home-content .hero-title {
@@ -320,6 +321,9 @@ header {
   display: inline-block;
   font-size: clamp(1.6rem, 6vw, 5rem);
   line-height: 1.1;
+  /* Reserve space so typing/deleting never reflows the layout */
+  min-height: 1.1em;
+  vertical-align: top;
 }
 
 .home .home-content p {
@@ -328,6 +332,23 @@ header {
   color: #b7b7b7;
   font-weight: 500;
   max-width: 60rem;
+}
+
+.home .home-content p .element {
+  display: inline-block;
+  /* Reserve width of the longest word so the line never re-wraps */
+  min-width: 6ch;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* On narrow screens the longest role wraps to 2 lines; reserve both
+   so the page doesn't jump as the typed text changes length. */
+@media (max-width: 600px) {
+  .home .home-content .hero-title span,
+  .home .home-content .hero-title .element {
+    min-height: 2.4em;
+  }
 }
 
 .home .home-content p span {
