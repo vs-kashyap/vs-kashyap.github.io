@@ -304,7 +304,6 @@ header {
   display: table-cell;
   vertical-align: middle;
   max-width: 100%;
-  z-index: 7;
 }
 
 .home .home-content .hero-title {
@@ -2081,6 +2080,8 @@ textarea.form-message {
 
 .home .home-content .hero-actions {
   margin-top: 40px;
+  position: relative;
+  z-index: 7;
 }
 
 .home .home-content .resume-btn {
