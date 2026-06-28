@@ -2082,6 +2082,7 @@ textarea.form-message {
   margin-top: 40px;
   position: relative;
   z-index: 7;
+  display: inline-block;
 }
 
 .home .home-content .resume-btn {
