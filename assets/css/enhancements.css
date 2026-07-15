@@ -1,0 +1,317 @@
+/* ===================================================== */
+/* CV-Driven Portfolio Enhancements                      */
+/* ===================================================== */
+
+/* --- Experience stat counters --- */
+.stats-band {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 30px 0 10px;
+}
+.stat-box {
+  text-align: center;
+  flex: 1 1 180px;
+  max-width: 240px;
+  padding: 26px 18px;
+  border: 1px solid #2e2e2e;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.stat-box:hover {
+  transform: translateY(-6px);
+  border-color: #ea0026;
+}
+.stat-box i {
+  font-size: 26px;
+  color: #ea0026;
+  margin-bottom: 12px;
+  display: block;
+}
+.stat-box .stat-number {
+  font-size: 46px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.stat-box .stat-number .plus {
+  color: #ea0026;
+}
+.stat-box .stat-label {
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+/* --- Home hero stats --- */
+.home .home-content .hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 45px;
+}
+.home .home-content .hero-stats .hs b {
+  display: block;
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.home .home-content .hero-stats .hs b i {
+  color: #ea0026;
+  font-style: normal;
+}
+.home .home-content .hero-stats .hs span {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #c4c4c4;
+}
+
+.home .home-content .hero-actions {
+  margin-top: 40px;
+  position: relative;
+  z-index: 7;
+  display: inline-block;
+}
+
+.home .home-content .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: #ea0026;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 40px;
+  transition: all ease 0.3s;
+}
+
+.home .home-content .resume-btn:hover {
+  background: #fff;
+  color: #ea0026;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(234, 0, 38, 0.25);
+}
+
+@media (max-width: 480px) {
+  .home .home-content .hero-actions {
+    margin-top: 30px;
+  }
+  .home .home-content .resume-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- Strength chips --- */
+.strength-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+.strength-tags .tag {
+  padding: 9px 18px;
+  border: 1px solid #ea0026;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.strength-tags .tag:hover {
+  background: #ea0026;
+  color: #fff;
+}
+
+/* --- Experience timeline --- */
+.timeline {
+  position: relative;
+  margin-top: 14px;
+  padding-left: 32px;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #333;
+}
+.timeline .t-item {
+  position: relative;
+  margin-bottom: 34px;
+}
+.timeline .t-item:last-child {
+  margin-bottom: 0;
+}
+.timeline .t-item:before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  border: 3px solid #ea0026;
+}
+.timeline .t-item .t-period {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ea0026;
+  margin-bottom: 6px;
+}
+.timeline .t-item .t-role {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 2px;
+}
+.timeline .t-item .t-company {
+  font-size: 15px;
+  color: #9a9a9a;
+  margin-bottom: 12px;
+}
+.timeline .t-item ul {
+  list-style: disc;
+  margin: 0 0 0 18px;
+  padding: 0;
+}
+.timeline .t-item ul li {
+  color: #c9c9c9;
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+/* --- Skill proficiency bars --- */
+.skill-set {
+  margin-top: 14px;
+}
+.skill-set .skill {
+  margin-bottom: 20px;
+}
+.skill-set .skill .skill-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #ddd;
+  font-size: 15px;
+  font-weight: 500;
+}
+.skill-set .skill .skill-head .pct {
+  color: #ea0026;
+}
+.skill-set .skill .skill-track {
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.skill-set .skill .skill-track .skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #ea0026, #ff5e7e);
+  border-radius: 6px;
+  transition: width 1.4s ease;
+}
+
+/* --- Competency / expertise grid --- */
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+.comp-grid .comp-card {
+  padding: 24px 22px;
+  border: 1px solid #2e2e2e;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.comp-grid .comp-card:hover {
+  border-color: #ea0026;
+  transform: translateY(-5px);
+}
+.comp-grid .comp-card i {
+  font-size: 28px;
+  color: #ea0026;
+  margin-bottom: 14px;
+  display: block;
+}
+.comp-grid .comp-card h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.comp-grid .comp-card p {
+  color: #9f9f9f !important;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Awards list --- */
+.award-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+.award-list li {
+  position: relative;
+  padding: 18px 0 18px 46px;
+  border-bottom: 1px solid #2a2a2a;
+  color: #c9c9c9;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.award-list li:last-child {
+  border-bottom: none;
+}
+.award-list li i {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  color: #ea0026;
+  font-size: 22px;
+}
+.award-list li strong {
+  color: #fff;
+}
+.award-list li .a-meta {
+  display: block;
+  color: #8f8f8f;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+  .stat-box .stat-number {
+    font-size: 38px;
+  }
+  .home .home-content .hero-stats {
+    gap: 26px;
+  }
+  .home .home-content .hero-stats .hs b {
+    font-size: 30px;
+  }
+  .titlebar .page-title {
+    font-size: 60px;
+  }
+}
