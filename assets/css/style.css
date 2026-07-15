@@ -816,10 +816,13 @@ header.white .nav-icon span {
   z-index: 4;
   transform: translateX(100%);
   transition: all ease 0.4s 0.6s;
+  overflow-x: hidden;
 }
 
 .full-menu .full-inner {
   height: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .full-menu .full-inner nav {
@@ -931,6 +934,12 @@ header.white .nav-icon span {
   transform: translateY(0);
   opacity: 1;
   transition: all ease 0.7s 1.4s;
+}
+
+.full-open .full-menu .full-inner .full-contact ul li:nth-child(4) {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all ease 0.7s 1.6s;
 }
 
 /* Nav Icon */
@@ -1704,6 +1713,63 @@ textarea.form-message {
   }
 }
 
+/* Full Menu - stack the "Get in Touch" section below the nav list
+   instead of hiding it off-screen. Applies to phones and tablets
+   (below the 992px desktop breakpoint where .col-md-* go side by side). */
+@media (max-width: 991px) {
+  .full-menu {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .full-menu .full-inner {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .full-menu .full-inner nav {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 90px 8% 30px;
+  }
+
+  .full-menu .full-inner nav ul {
+    display: block;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .full-menu .full-contact,
+  .full-menu .full-inner .full-contact {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    height: auto;
+    margin-top: auto;
+    padding: 35px 8% 60px;
+  }
+
+  .full-menu .full-inner .full-contact ul {
+    display: block;
+    padding-left: 1rem;
+  }
+
+  .full-menu .full-inner .full-contact ul li.title {
+    margin-bottom: 14px;
+  }
+
+  .full-menu .full-inner .full-contact ul li {
+    margin-bottom: 10px;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
   header {
     padding: 18px;
@@ -1999,6 +2065,16 @@ textarea.form-message {
 
   .wrapper {
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 375px) {
+  .full-menu .full-inner nav ul li a {
+    font-size: 21px;
+  }
+
+  .full-menu .full-inner .full-contact ul li {
+    font-size: 17px;
   }
 }
 

@@ -140,6 +140,19 @@ $(document).ready(function () {
         $('body').toggleClass('full-open');
     });
 
+    // Close the menu when navigating to another page
+    $('.full-menu a').click(function () {
+        $('body').removeClass('full-open');
+    });
+
+    // Close the menu if the page is restored from the browser's
+    // back/forward cache with the menu left open
+    $(window).on('pageshow', function (e) {
+        if (e.originalEvent && e.originalEvent.persisted) {
+            $('body').removeClass('full-open');
+        }
+    });
+
 
     // OWL CAROUSEL GENERAL JS
     var owlcar = $('.owl-carousel');
